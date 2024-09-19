@@ -97,3 +97,10 @@ h1{
 }
 
 
+button:hover {
+    background-color: #4e84fa;
+}
+
+button:active {
+    background-color: #ccc;
+}
