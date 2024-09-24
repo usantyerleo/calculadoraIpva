@@ -104,3 +104,32 @@ button:hover {
 button:active {
     background-color: #ccc;
 }
+
+#consultasLateral {
+    position: fixed; 
+    right: 120px; 
+    top: 100px; 
+    width: 250px; 
+    padding: 15px; 
+    background-color: #f9f9f9; 
+    border: 1px solid #ccc; 
+    border-radius: 10px; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+    z-index: 1000; 
+    max-height: 400px; 
+    overflow-y: auto; 
+}
+
+
+#listaConsultas {
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+}
+
+
+#listaConsultas li {
+    margin-bottom: 10px; 
+    font-size: 14px; 
+    color: #333; 
+}

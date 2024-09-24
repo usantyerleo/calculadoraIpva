@@ -5,46 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/calculadoraIpva/calculadoraIpva.css">
     <title>Calcule seu IPVA</title>
-
 </head>
 <body>
     <div class="pai">
-    <h1>Calcule seu IPVA</h1>
+        <h1>Calcule seu IPVA</h1>
         <div id="valor1">
-        <label>Valor</label><p></p>
-        <input id="valor" type="text" placeholder="R$ 0,00" oninput="mascaraDh(this)" name="valor">
-        <p>consulte a <a class="text-custom_blue_200" href="https://veiculos.fipe.org.br/">tabela FIPE</a></p>
+            <label>Valor</label><p></p>
+            <input id="valor" type="text" placeholder="R$ 0,00" oninput="mascaraDh(this)" name="valor">
+            <p>Consulte a <a class="text-custom_blue_200" href="https://veiculos.fipe.org.br/">tabela FIPE</a></p>
+        </div>
+        <p></p>
+        <div class="selecoes">
+            <label>Tipo de veículo</label><p></p>
+            <select id="tipoVeiculo" name="tipo">
+                <option class="tipoOpcoes">Particular e passeio</option>
+                <option class="tipoOpcoes">Caminhonetes e utilitários</option>
+                <option class="tipoOpcoes">Transporte de passageiros</option>
+                <option class="tipoOpcoes">Motocicletas e quadriciclos</option>
+                <option class="tipoOpcoes">Locadoras de veículos</option>
+                <option class="tipoOpcoes">Ônibus e caminhões</option>
+            </select><p></p>
+            <label>Estado</label><p></p>
+            <select id="estado" name="estado">
+                <option class="estados">Pernambuco</option>
+                <option class="estados">Alagoas</option>
+                <option class="estados">Bahia</option>
+                <option class="estados">Ceará</option>
+                <option class="estados">Maranhão</option>
+                <option class="estados">Paraíba</option>
+                <option class="estados">Piauí</option>
+                <option class="estados">Rio Grande do Norte</option>
+                <option class="estados">Sergipe</option>
+            </select>
+        </div>
+        <div id="resultado">
+            <button id="botaoCalcular" type="button" class="botaoResultado">Calcular</button>
+        </div>
+        <div id="resultadoContainer" class="invisivel"></div>
     </div>
-<p></p>
-    <div class="selecoes">
-        <label>Tipo de veículo</label><p></p>
-        <select id="tipoVeiculo" name="tipo">
-            <option class="tipoOpcoes">Particular e passeio</option>
-            <option class="tipoOpcoes">Caminhonetes e utilitários</option>
-            <option class="tipoOpcoes">Transporte de passageiros</option>
-            <option class="tipoOpcoes">Motocicletas e quadriciclos</option>
-            <option class="tipoOpcoes">Locadoras de veículos</option>
-            <option class="tipoOpcoes">Ônibus e caminhões</option>
-        </select><p></p>
-        <label>Estado</label><p></p>
-        <select id="estado" name="estado">
-            <option class="estados">Pernambuco</option>
-            <option class="estados">Alagoas</option>
-            <option class="estados">Bahia</option>
-            <option class="estados">Ceará</option>
-            <option class="estados">Maranhão</option>
-            <option class="estados">Paraíba</option>
-            <option class="estados">Piauí</option>
-            <option class="estados">Rio Grande do Norte</option>
-            <option class="estados">Sergipe</option>
-        </select>
+    <div id="consultasLateral" class="consultas-lateral">
+        <h3>Suas últimas consultas</h3>
+        <ul class="ultimasConsultas" id="listaConsultas"></ul>
     </div>
-   <div id="resultado">
-    <button id="botaoCalcular" type="button" class="botaoResultado">Calcular</button>
-   </div>
-    <div id="resultadoContainer" class="invisivel"></div>
-</div>
-</form>
     <script src="calculadoraIpva.js"></script>
 </body>
 </html>
